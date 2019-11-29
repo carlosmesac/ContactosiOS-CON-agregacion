@@ -15,6 +15,9 @@
 		37280EAB2167AA7400F67912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37280EA92167AA7400F67912 /* LaunchScreen.storyboard */; };
 		37280EB62167AA7400F67912 /* ContactosiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37280EB52167AA7400F67912 /* ContactosiOSTests.swift */; };
 		37280EC12167AA7400F67912 /* ContactosiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37280EC02167AA7400F67912 /* ContactosiOSUITests.swift */; };
+		37280ED42167AEE500F67912 /* DatosDeContacto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37280ED22167AEE500F67912 /* DatosDeContacto.swift */; };
+		37280ED52167AEE500F67912 /* DatosDeContactoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37280ED32167AEE500F67912 /* DatosDeContactoController.swift */; };
+		FBF1FA502391114300AC734B /* AgregacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1FA4F2391114300AC734B /* AgregacionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		37280EBC2167AA7400F67912 /* ContactosiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactosiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37280EC02167AA7400F67912 /* ContactosiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosiOSUITests.swift; sourceTree = "<group>"; };
 		37280EC22167AA7400F67912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37280ED22167AEE500F67912 /* DatosDeContacto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatosDeContacto.swift; sourceTree = SOURCE_ROOT; };
+		37280ED32167AEE500F67912 /* DatosDeContactoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatosDeContactoController.swift; path = ContactosiOS/Controlador/ControladorDeDatos/DatosDeContactoController.swift; sourceTree = SOURCE_ROOT; };
+		FBF1FA4F2391114300AC734B /* AgregacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregacionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,9 @@
 		37280E9D2167AA7000F67912 /* ContactosiOS */ = {
 			isa = PBXGroup;
 			children = (
+				37280ECF2167ACD500F67912 /* Controlador */,
+				37280ECE2167ACC800F67912 /* Modelo */,
 				37280E9E2167AA7000F67912 /* AppDelegate.swift */,
-				37280EA02167AA7000F67912 /* MasterViewController.swift */,
-				37280EA22167AA7000F67912 /* DetailViewController.swift */,
 				37280EA42167AA7000F67912 /* Main.storyboard */,
 				37280EA72167AA7400F67912 /* Assets.xcassets */,
 				37280EA92167AA7400F67912 /* LaunchScreen.storyboard */,
@@ -126,6 +132,49 @@
 				37280EC22167AA7400F67912 /* Info.plist */,
 			);
 			path = ContactosiOSUITests;
+			sourceTree = "<group>";
+		};
+		37280ECE2167ACC800F67912 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				37280ED22167AEE500F67912 /* DatosDeContacto.swift */,
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
+		37280ECF2167ACD500F67912 /* Controlador */ = {
+			isa = PBXGroup;
+			children = (
+				FBF1FA4C2391105400AC734B /* ControladorDeAgregacion */,
+				37280ED12167ADA700F67912 /* ControladorDeDatos */,
+				37280ED02167AD0D00F67912 /* ControladorMaestroDetalle */,
+			);
+			path = Controlador;
+			sourceTree = "<group>";
+		};
+		37280ED02167AD0D00F67912 /* ControladorMaestroDetalle */ = {
+			isa = PBXGroup;
+			children = (
+				37280EA02167AA7000F67912 /* MasterViewController.swift */,
+				37280EA22167AA7000F67912 /* DetailViewController.swift */,
+			);
+			path = ControladorMaestroDetalle;
+			sourceTree = "<group>";
+		};
+		37280ED12167ADA700F67912 /* ControladorDeDatos */ = {
+			isa = PBXGroup;
+			children = (
+				37280ED32167AEE500F67912 /* DatosDeContactoController.swift */,
+			);
+			path = ControladorDeDatos;
+			sourceTree = "<group>";
+		};
+		FBF1FA4C2391105400AC734B /* ControladorDeAgregacion */ = {
+			isa = PBXGroup;
+			children = (
+				FBF1FA4F2391114300AC734B /* AgregacionViewController.swift */,
+			);
+			path = ControladorDeAgregacion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF1FA502391114300AC734B /* AgregacionViewController.swift in Sources */,
 				37280EA32167AA7000F67912 /* DetailViewController.swift in Sources */,
 				37280EA12167AA7000F67912 /* MasterViewController.swift in Sources */,
+				37280ED52167AEE500F67912 /* DatosDeContactoController.swift in Sources */,
 				37280E9F2167AA7000F67912 /* AppDelegate.swift in Sources */,
+				37280ED42167AEE500F67912 /* DatosDeContacto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
